@@ -1,0 +1,159 @@
+/* =========================
+   全体設定
+========================= */
+:root {
+  --bg-main: #035027;
+  --bg-sub: #002a1d;
+  --text-main: #fdfdfd;
+  --text-sub: #939393;
+  --accent: #fffb00;
+  --accent-strong: #ffffff;
+}
+
+.slidev-layout {
+  background: linear-gradient(120deg, var(--bg-main), var(--bg-sub));
+  color: var(--text-main);
+  font-family: "Inter", "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.6;
+  padding:3.5rem 4rem;
+}
+
+/* =========================
+   最適化とは
+========================= */
+.slidev-layout.quote,
+.slidev-page.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slidev-layout.quote p,
+.slidev-page.quote p {
+  font-size: 2rem;
+  line-height: 1.9;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slidev-layout.quote strong,
+.slidev-page.quote strong {
+  color: #fbbf24;
+  font-size: 2.2rem;
+}
+
+/* =========================
+   表紙(cover)
+========================= */
+.slidev-layout.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slidev-layout.cover h1 {
+  font-size: 4.5rem;       /* 巨大タイトル */
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+/* =========================
+   見出し
+========================= */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8em;
+  border-left: 6px solid var(--accent);
+  padding-left: 0.6em;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+/* =========================
+   本文・リスト
+========================= */
+p {
+  font-size: 1.1rem;
+}
+
+ul {
+  margin-top: 0.6em;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+strong {
+  color: #e7ae1f; /* 強調は黄色寄り */
+  font-weight: 700;
+}
+
+/* =========================
+   矢印表現 (-> を使う文章向け)
+========================= */
+.slidev-layout p:has(> span.arrow) {
+  color: var(--text-sub);
+}
+
+/* =========================
+   表
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
+th {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--accent);
+  padding: 0.6em;
+  text-align: left;
+}
+
+td {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.6em;
+}
+
+/* =========================
+   引用・思想系スライド向け
+========================= */
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 1em;
+  color: #e0f2fe;
+  font-style: italic;
+}
+
+/* =========================
+   フッター
+========================= */
+footer {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+/* =========================
+   ページ分割の雰囲気
+========================= */
+.slidev-layout::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0.4;
+}
